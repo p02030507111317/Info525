@@ -1,0 +1,166 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\author{CLAVIER Paul}
+\title{[Info 525]Logique}
+\begin{document}
+%head
+\maketitle
+\newpage
+\tableofcontents
+\newpage
+%body
+\section{Définition}
+\begin{itemize}
+\item Logique vient du grec Logos, qui veut dire à la fois raison et langage.
+\item "Étude du discours rationnel."
+\item "Étude de la raison dans le langage."
+\item "Science des conditions de vérités."
+\end{itemize}
+\subsection{Logique classique $(<1850)$}
+\begin{itemize}
+\item Analyse du langage.
+\item Division de la grammaire: sujet attribut.
+\item Prédominance de la logique Aristotélicienne.
+\item Plusieurs périodes.
+\end{itemize}
+\subsection{Logique moderne, symbolique axiomatique}
+\begin{itemize}
+\item Mathématisation, algébrisation de la logique.
+\item Les relations perdent leur caractère grammatical.
+\item Un système d'axiomes choisis arbitrairement et soumis à des règles de déduction immédiates.
+\item \emph{Forme de pensée et une approche du logos différente.}
+\item Système de réécriture , manipulation des signes sans sens.
+\end{itemize}
+\framebox{Pas de définition unique: fonction de l'époque, du logicien, de l'objectif.}
+\section{De Morgan}
+\begin{itemize}
+\item Définit l'expression de l'induction mathématique.
+\item Auteur des lois de De Morgan
+\end{itemize}
+\section{Boole}
+\section{Frege}
+\begin{itemize}
+\item Fondateur de la logique moderne et de son symbolisme.
+\item Publie des ouvrages 
+\end{itemize}
+\section{Gentzen}
+\begin{itemize}
+\item Définit une déduction naturelle.
+\end{itemize}
+\section{Russel}
+\section{Méthodes}
+\subsection{Sémantique}
+On va s’intéresser au sens d'une formule (table de vérité)
+\subsection{Syntaxique}
+Réécriture\\
+\[ \dfrac{\Gamma \vdash A,\Delta \Gamma\vdash B,\Delta}{\Gamma \vdash A\wedge B, \Delta} \]
+\subsection{Types de logiques}
+\begin{itemize}
+\item Logique des propositions (ordre 0).
+\item Logique des prédicats.
+\item Logiques déviantes.
+\end{itemize}
+\section{Logique}
+\subsection{Introduction}
+Le calcul des propositions ou des énoncés:\begin{itemize}
+\item des plus élémentaires (ordre 0)
+\item des plus fondamentaux
+\item des plus simples: propositions non analysée
+\end{itemize}
+Calcul: \begin{itemize}
+\item étudie les énoncés qui sont soit vrais, soit faux
+\item Vériconditionnel: comment les énoncés complexes deviennent vrais ou faux selon que énoncés qui le compose sont vais ou faux.
+\end{itemize}
+\begin{description}
+\item[Définition]: Un énoncé ou proposition est de qui est vrai ou faux
+\begin{center}
+\underline{Notion simplificatrice de la vérité}
+\end{center}
+\end{description}
+\textbf{On s’intéresse à la structure des propositions complexes}
+\begin{itemize}
+\item indépendamment de leur contenu de signification
+\item indépendamment de la langue naturelle
+\end{itemize}
+La logique est un langage \begin{itemize}
+\item Vocabulaire
+\item Syntaxe
+\item Sémantique
+\end{itemize}
+		\subsubsection{Vocabulaire}
+		\begin{enumerate}
+			\item Ensemble infini dénombrable de proposition
+			\begin{itemize}
+				\item désignés par une lettre minuscule
+			\end{itemize}
+			\item Ensemble d'opérateurs
+			\begin{itemize}
+				\item négation: $\neg$
+				\item conjonction: $\wedge$
+				\item disjonction: $\vee$
+				\item implication: $\rightarrow$
+				\item équivalence: $\leftrightarrow$
+			\end{itemize}
+			\item Ensemble de séparateurs: (, ), [, ] , \{, \}
+		\end{enumerate}
+		\subsubsection{Syntaxe}
+			\begin{itemize}
+				\item Le vocabulaire peut donner lieu à de multiples assemblages de symboles
+				\item Les assemblages qui font partie du langage sont appelés des formules
+				\item Les formules sont obtenues à partir de règles de formation
+			\end{itemize}
+			\begin{description}
+				\item[Formules]:
+				\begin{enumerate}
+					\item Toute proposition est une formule: formule atomique
+					\item Récurrence: Si $A$ et $B$ sont deux formules Alors $\neg A$, $(A\wedge B)$, $(A\vee B)$, $(A\rightarrow B)$, $(A\leftrightarrow B)$, ... sont des formules
+					\item Clôture: rien d'autre n'est une formule
+				\end{enumerate}
+				\item[Remarques]:
+				\begin{enumerate}
+					\item Les parenthèses permettent de déterminer l'ordre d'application des règles
+					\item Langage objet et méta-langage
+					\begin{itemize}
+						\item langage objet: objet de la théorie (langage des formules)
+						\item introduction de nouveaux symboles: A, B, $\Leftrightarrow$, $\vDash$, ... qui permettent de parler des formules (langage de l'observateur)
+					\end{itemize}
+					\item L'ensemble des formules est infini dénombrable
+					\item Cet ensemble est récursif
+				\end{enumerate}
+			\end{description}
+\section{Validité d'une formule}
+	\subsection{Sémantique}
+		\begin{itemize}
+			\item La sémantique attribue une signification aux formules du langage
+			\item Un proposition est soit vraie soit fausse
+		\end{itemize}
+		\begin{description}
+			\item[Définition]: Le domaine sémantique est $\{V, F\}$
+			\item[Définition]: Interpréter une formule consiste à lui attribuer la valeur V ou F
+			\item[Définition]: On appelle assignation sur $n$ propositions un ensemble d'interprétations de ces propositions. Elle définit un monde possible
+			\item[Définition]: L'interprétation est une fonction appelée fonction de vérité $\{assignations\}\longrightarrow\{V,F\}$. A partir de $n$ propositions, il est possible de définir $2^{2^n}$
+		\end{description}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
