@@ -149,9 +149,20 @@ La logique est un langage \begin{itemize}
 			\end{itemize}
 			\item[Définition]: Une assignation qui rend vrai une formule est appelé un modèle pour cette formule
 		\end{description}
-
-
-
+	\subsection{Validité et Consistance}
+		\begin{description}
+			\item[Définition]: Une formule est sémantiquement consistance, ou consistance, si elle admet au moins un modèle.
+			\item[Définition]: Une formule est dite valide si toutes ses assignations sont des modèles. Une formule valide est aussi appelée tautologie.
+			\item[Théorème]: Si une formule est valide (resp. inconsistante), la formule obtenue en substituant chaque occurrence d'une lettre de proposition par une formule quelconque est également valide (resp. inconsistante).
+		\end{description}
+	\subsection{Remarque: Métalangage}
+		\begin{itemize}
+			\item L'expression: "A est une formule valide" appartiens au métalangage, on la note: $\vDash$
+			\item Le symbole $\vDash$ ne peut pas apparaître dans une formule du langage objet
+		\end{itemize}
+		\begin{description}
+			\item[Remarque]: $\rightarrow$ est un opérateur logique comme les autres.
+		\end{description}				
 
 
 
