@@ -162,9 +162,46 @@ La logique est un langage \begin{itemize}
 		\end{itemize}
 		\begin{description}
 			\item[Remarque]: $\rightarrow$ est un opérateur logique comme les autres.
-		\end{description}				
-
-
+		\end{description}
+\section{Théorie syntaxique}
+	\subsection{Introduction}
+		Pour connaître la validité d'un formule, on dispose de 2 méthodes:
+		\begin{itemize}
+			\item méthode sémantique (table de vérité)
+			\item méthode symbolique (syntaxique): transformer, réécrire, une formule équivalente pour aboutir à une formule remarquable (tautologie)
+		\end{itemize}			
+	\subsection{Équivalence et remplacement}
+		\begin{itemize}
+			\item Des formules différentes peuvent avoir la même table de vérité
+		\end{itemize}
+		\begin{description}
+			\item[Définition]: 2 formules ont la même table de vérité ssi: \[ \vDash A \leftrightarrow B \]
+			\item[Définition]: Relation d'équivalence logique: \[A\Leftrightarrow B\: ssi\: \vDash A \leftrightarrow B\]
+			\item[Remarques]:
+			\begin{itemize}
+				\item $\Leftrightarrow$ n'est pas un opérateur permettant de définir une formule
+				\item $A\Leftrightarrow B$ est une relation du méta-langage
+				\item $\Leftrightarrow$ est une relation d'équivalence (réflexive, transitive, symétrique)
+			\end{itemize}
+			\item[Théorème de remplacement]: Notons $\Phi(F)$ une formule contenant la sous formule $F$. Si $A\Leftrightarrow B$ alors $\Phi(A)\Leftrightarrow \Phi(A/B)$ (\emph{A est remplacé par B}).
+			\item[Corollaire]: Si $A\Leftrightarrow B$, alors si $\vDash\Phi(A), \vDash\Phi(A/B)$
+			\item[Intérêt]: On peut construire une chaîne d'équivalences sans passer par les tables de vérité.
+		\end{description}
+	\subsection{Algèbre de Boole}
+		\begin{description}
+			\item[Calcul]: transformer une formule en une formule équivalente.
+			\item[Équivalences fondamentales]: justifiées par les tables de vérité.
+			\item[Définition]: $1$ et $0$ sont deux formules particulières. $1$ désigne la classe des formules valides, $0$ désigne celle des formules inconsistantes.
+			\item[Notation]: $F\Leftrightarrow 1$ si $\vDash F$\\$F\Leftrightarrow 0$ si $\vDash\neg F$
+			\item[Idempotence]: $A\vee A\Leftrightarrow A$, $A\wedge A\Leftrightarrow A$.
+			\item[Non contradiction]: $A\wedge\neg A\Leftrightarrow 0$
+			\item[Tiers exclu]: $A\vee\neg A\Leftrightarrow 1$
+			\item[Double négation]: $\neg\neg A \Leftrightarrow A$
+			\item[Éléments neutres]: $A\wedge 1 \Leftrightarrow A$, $A\vee 0 \Leftrightarrow A$
+			\item[Commutativité]: $A\vee B\Leftrightarrow B\vee A$, $A\wedge B\Leftrightarrow B\wedge A$
+			\item[Réécriture]: $A\leftrightarrow B \Leftrightarrow (A\wedge B)\vee (\neg A\wedge\neg B)$\\$A\rightarrow B \Leftrightarrow \neg A\vee B$
+			
+		\end{description}
 
 
 
