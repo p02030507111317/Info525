@@ -225,9 +225,65 @@
 					\item Application des règles de la distributivité
 				\end{enumerate}
 		\end{description}
-
-
-
+	\subsection{Méthode des arbres}
+		\subsubsection{Méthode syntaxique}
+			\begin{itemize}
+				\item décider si une formule est valide ou inconsistante
+				\item permet de développer une formule
+				\begin{itemize}
+					\item construire une FND équivalente
+				\end{itemize}
+				\item système formel $\Rightarrow$ définir des \emph{règles de réécriture}
+				\item méthode graphique:
+				\begin{itemize}
+					\item une conjonction est vraie ssi les 2 termes sont vrais:\emph{séquence}
+					\item une disjonction est vraie ssi au moins 1 terme est vrai:\emph{branchement}
+				\end{itemize}
+				\item règles de constructions
+				\begin{description}
+					\item Construire un arbre à partir d'une formule donnée en ré-écrivant chaque formule
+					\item on pointe une formule pour indiquer qu'elle a étée réécrite
+				\end{description}
+				\item règles de réécriture pour: $\vee,\wedge,\neg,\rightarrow,\leftrightarrow$ et leur négation.
+				\item construction de chemins
+				\item fermeture d'un chemin: on ferme un chemin dès qu'il contient une formule et sa négation
+				\item arbre complètement développé: les formules sont réécrites jusqu'au lettres de propositions ou leurs négations
+				\item chemins \emph{non fermés} de l'arbre completement développé
+				\begin{itemize}
+					\item chemins de vérité: conjonction de lettres de proposition obtenues en lisant l'arbre de bas en haut. Si la valeur d'un chemin est vraie, la formule est vraie
+					\item termes d'une FND équivalente
+				\end{itemize}
+			\end{itemize}
+\section{Validité d'un raisonnement}
+	\subsection{Théorie sémantique}
+		\begin{description}
+		\subsubsection{Objectifs}
+			\item[Jusqu'a présent]:
+				\begin{itemize}
+					\item véracité des énoncés
+					\item relation entre formules ($\Leftrightarrow$)
+				\end{itemize}
+			\item[Déduction]:
+				\begin{itemize}
+					\item \emph{Opération} qui consiste à adjoindre à un ensemble d'énoncés un autre énoncé nécessairement vrai si les premiers le sont.
+					\item \emph{Relation de déductibilité} entre hypothèses et conséquence résultante
+					\item \emph{Tautologie - Validité}: A est valide si toutes les assignations sont des modèles
+				\end{itemize}
+			\item[Définition]: Nous notons $A_0,A_1,\ldots,A_n \models B$ ssi toute assignation qui vérifie conjointement $A_0,A_1,\ldots,A_n$ vérifie également $B$
+			\item[Définition]: $B$ est une \emph{conséquence valide} de $A_0,A_1,\ldots,A_n$.\\
+				$\models$ est une relation, \emph{la relation de déductibilité}, entre formules.
+			\item[Remarque]: Une tautologie est toujours vraie, conditionnée par aucune prémisse: $\models A$ est une abréviation de $\emptyset\models A$.
+			\item[Propriétés de la relation $\models$]:
+				E et F désignent deux listes de formules finies
+				\begin{enumerate}
+					\item si $A in E, E\models A$
+					\item si $E\models A$ alors $E,F\models A$
+					\item si $E\models A$ et $F,A\models B$ alors $E,F\models B$
+				\end{enumerate}
+			\item[Théorème]: $B\models A$ ssi $\models B\rightarrow A$.
+			\item[Théorème]: $A_0,\ldots,A_n\models A$ ssi $A_0,\ldots,A_{n-1} \models An \rightarrow A$.
+		\end{description}
+		
 
 
 
