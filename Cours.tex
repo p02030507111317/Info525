@@ -242,13 +242,13 @@
 				\item règles de constructions
 				\begin{description}
 					\item Construire un arbre à partir d'une formule donnée en ré-écrivant chaque formule
-					\item on pointe une formule pour indiquer qu'elle a étée réécrite
+					\item on pointe une formule pour indiquer qu'elle a été réécrite
 				\end{description}
 				\item règles de réécriture pour: $\vee,\wedge,\neg,\rightarrow,\leftrightarrow$ et leur négation.
 				\item construction de chemins
 				\item fermeture d'un chemin: on ferme un chemin dès qu'il contient une formule et sa négation
 				\item arbre complètement développé: les formules sont réécrites jusqu'au lettres de propositions ou leurs négations
-				\item chemins \emph{non fermés} de l'arbre completement développé
+				\item chemins \emph{non fermés} de l'arbre complètement développé
 				\begin{itemize}
 					\item chemins de vérité: conjonction de lettres de proposition obtenues en lisant l'arbre de bas en haut. Si la valeur d'un chemin est vraie, la formule est vraie
 					\item termes d'une FND équivalente
@@ -258,7 +258,7 @@
 	\subsection{Théorie sémantique}
 		\begin{description}
 		\subsubsection{Objectifs}
-			\item[Jusqu'a présent]:
+			\item[Jusqu’à présent]:
 				\begin{itemize}
 					\item véracité des énoncés
 					\item relation entre formules ($\Leftrightarrow$)
@@ -284,6 +284,23 @@
 			\item[Théorème]: $A_0,\ldots,A_n\models A$ ssi $A_0,\ldots,A_{n-1} \models An \rightarrow A$.
 		\end{description}
 		
+\section{Déduction naturelle}
+	\subsection{Règles pour l'implication}
+		\begin{itemize}
+			\item $\rightarrow_e$ : $A,A\rightarrow B \vdash B$
+			\item $\rightarrow_i$ : $X,A \vdash B, X \vdash A \rightarrow B$
+		\end{itemize}
+	\subsection{Règle pour la disjonction}
+		\begin{itemize}
+			\item $\vee_i$ : $A\vdash A\vee B$
+			\item $\vee_e$ si $A\vdash C$ et $B\vdash C$, alors $A\vee B\vdash C$
+		\end{itemize}
+	\subsection{Règles pour la négation}
+		\begin{itemize}
+			\item $\neg \neg_e$ : $\neg\neg A\vdash A$
+			\item $\neg_i$ : si $X,A\vdash B$ et $x,A\vdash \neg B$ alors $X\vdash \neg A$
+		\end{itemize}
+	
 
 
 

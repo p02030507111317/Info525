@@ -1,0 +1,51 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[francais]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\author{Paul CLAVIER}
+\title{[Info525]Résolution}
+\begin{document}
+\maketitle
+\newpage
+\section{Déduction naturelle}
+	\begin{itemize}
+		\item règles et raisonnement 'naturels'
+		\item automatisation (?)
+	\end{itemize}
+	\paragraph{informatique:}
+	\begin{itemize}
+		\item une seule règle
+		\item simple
+	\end{itemize}
+	\paragraph{$\Rightarrow$} Le principe de résolution
+	\begin{itemize}
+		\item Démonstrations automatiques de Théorèmes
+		\item Langage Prologue
+	\end{itemize}
+\section{Principes}
+	\begin{itemize}
+		\item les formules sont sous forme clausale
+		\item utilisation de la FNC
+	\end{itemize}
+	\paragraph{Règles de résolution}:
+		Soient deux clauses $c_1 = c'_1 \vee p$ et $c_2=c'_2 \vee \neg p$, \[c'_1\vee p, c'_2\vee\neg p \vdash c'_1\vee c'_2\]
+	\paragraph{Définition}: La clause $c'_1\vee c'_2$ est appelée résolvant.
+	\paragraph{Mise en œuvre}:
+		\begin{description}
+			\item[Rappel des théorèmes]: $A_1,\ldots, A_n \vdash B$ ssi $A_1,\ldots,A_n \models B$\\
+				$A_1,\ldots,A_n \models B$ ssi $A_1 \wedge \ldots \wedge A_n \wedge \neg N \models B$
+		\end{description}
+		L'ensemble $\{A_1, \ldots, A_n, \neg B\}$ est inconsistant.
+	\paragraph{Mise en pratique de la Résolution}
+		\begin{itemize}
+			\item Soit $E$ un ensemble de clauses
+			\item On calcule tous les résolvants des paires de clauses
+			\item On ajoute les résolvants à $E$
+			\item Le procédé est répété jusqu’à trouver une paire de littéraux complémentaires.
+			\item L'ensemble de clauses $E$ est alors inconsistant.
+		\end{itemize}
+
+\end{document}
